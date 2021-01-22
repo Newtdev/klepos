@@ -498,7 +498,7 @@ const Product = [
     categoryId: 1,
     rate: 0.29,
     content:
-      "Autem blanditiis similique saepe excepturi at error. Fugit qui accusantium expedita. Illo similique suscipit sunt magni eos est.",
+      "Autem blanditiis similique saepe excepturi at error. Fugit qui accusantium.",
     review: 44,
     typeVariant: "C",
     colorVariant: "3",
@@ -526,7 +526,7 @@ const Product = [
     categoryId: 1,
     rate: 2.94,
     content:
-      "Iure similique perferendis quia optio provident asperiores ad. Perferendis id voluptatibus impedit. Rerum totam quam distin.",
+      "Iure similique perferendis quia optio provident asperiores ad. Perferendis i.",
     review: 153,
     typeVariant: "E",
     colorVariant: "4",
@@ -541,7 +541,7 @@ const Product = [
     categoryId: 1,
     rate: 2.68,
     content:
-      "Cum aperiam sapiente non magni sequi facere. Et nihil soluta illum ipsum fuga vero. Magnam ni.",
+      "Cum aperiam sapiente non magni sequi facere. Et nihil soluta illum ips.",
     review: 29,
     typeVariant: "C",
     colorVariant: "4",
@@ -555,7 +555,7 @@ const Product = [
     categoryId: 1,
     rate: 1.89,
     content:
-      "Totam repudiandae assumenda facilis quod suscipit repellat delectus eligendi. Nihil repellendus officiis officia.",
+      "Totam repudiandae assumenda facilis quod suscipit repellat delectus eligendi. .",
     review: 200,
     typeVariant: "B",
     colorVariant: "1",
@@ -569,7 +569,7 @@ const Product = [
     categoryId: 1,
     rate: 0.17,
     content:
-      "At non doloribus alias optio delectus sit. Aperiam officiis soluta molestias asperiores similique reiciendis pariatur. Ab .",
+      "At non doloribus alias optio delectus sit. Aperiam officiis soluta molestias .",
     review: 68,
     typeVariant: "B",
     colorVariant: "4",
