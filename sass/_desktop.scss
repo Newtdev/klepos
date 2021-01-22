@@ -1,0 +1,775 @@
+$all_text_weight: lighter;
+$primary-color: #2a0845;
+$secondary-color: #f1f1f1;
+$sign-up-color: #4caf50;
+$log-in-color: #ff0000;
+$lighter_secondary: #12130f;
+$main_color: #ccc;
+$cart_overlay: #f1f1f1b3;
+
+@media screen and (min-width: 720px) {
+  header {
+    width: 100%;
+    height: 3rem;
+    background: $primary-color;
+  }
+
+  .header_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 119rem;
+    margin: auto;
+  }
+
+  /* hamburger menu styling */
+  .hamburger_menu {
+    display: none !important;
+  }
+
+  .logo {
+    height: 3rem;
+    margin-left: 1.7rem;
+  }
+
+  .logo > a {
+    font-size: 2.3rem;
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  /* icon styling*/
+  .icon_container {
+    margin-right: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .icon_container > span {
+    display: inline-block;
+    margin: 0 0.8rem;
+    cursor: pointer;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+    color: $secondary-color;
+  }
+
+  .fa-search {
+    display: block;
+  }
+
+  // navbar styling
+
+  %span_shared {
+    display: inline-block;
+    padding: 0.5rem 1.8rem;
+    font-size: 1.2rem;
+    font-weight: $all_text_weight;
+    text-transform: capitalize;
+    border: 1px solid #111;
+    border-radius: 0.15rem;
+    color: blue;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  // nav bar styling for mobile
+  .nav {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    background: $secondary-color;
+    box-shadow: 2px 2px 3px $primary-color;
+    transition: none;
+    //    z-index: 1;
+  }
+
+  .open_sidebar {
+    left: 0;
+  }
+
+  .nav_container {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  // sign in and log in button the side bar
+
+  //search bar in the sidebar styling
+  .top__items {
+    display: none;
+  }
+
+  // order list, list and links in the sider bar
+  .links__container {
+    height: 3rem;
+    width: 100%;
+    max-width: 93rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+
+  .links__container li {
+    display: inline-block;
+    height: 0;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .links__container li > a {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 0;
+    color: $primary-color;
+  }
+
+  .fa-chevron-right {
+    font-size: 0.9rem;
+    transform: rotate(90deg);
+    color: $primary-color;
+    transition: none;
+    margin: 0 0.3rem;
+  }
+
+  .fa-chevron-right .open {
+    transform: none;
+  }
+
+  // social media styling in side bar
+  .social_media_container {
+    display: none !important;
+  }
+
+  // tablet and desktop background styling
+  .background_container {
+    height: 30rem;
+    width: 100vw;
+    background: green;
+    margin-top: 6rem !important;
+  }
+
+  .container {
+    height: 25rem;
+    width: 100%;
+  }
+
+  .container_image {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(1, 1, 1, 0.679), rgba(0, 0, 0, 0.2)),
+      url("/images/background.jpg");
+    background-position: cover;
+    background-size: center;
+    background-repeat: no-repeat;
+  }
+
+  .background_content {
+    height: 100% !important;
+    width: 50% !important;
+    // background: red;
+    transform: translateY(0) !important;
+    transform: translateX(20%) !important;
+    margin-left: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading_container {
+    height: 5rem;
+    margin-top: -7rem;
+
+    // background: yellow;
+  }
+
+  .heading_container h1 {
+    font-size: 1.5rem !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.7rem;
+    color: $secondary-color;
+  }
+
+  .btn_container {
+    background: $primary-color;
+    margin-top: 1rem;
+    width: 7rem;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+  }
+
+  .btn_container:hover {
+    opacity: 0.85;
+  }
+
+  .btn {
+    display: block;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  %empty {
+    height: 0.2rem;
+    width: 5.8rem;
+    border-radius: 6rem;
+    background: $log-in-color;
+    margin: 0.7rem 0;
+  }
+
+  #empty {
+    @extend %empty;
+  }
+
+  .sub {
+    width: 100%;
+  }
+
+  .sub p {
+    font-size: 0.85rem;
+    font-weight: lighter;
+    text-transform: capitalize;
+    line-height: 1rem;
+    color: $secondary-color;
+  }
+
+  #container {
+    @extend %empty;
+    width: 7rem;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .background_content {
+    width: 50% !important;
+    margin-left: 0 !important;
+    // background: red;
+    transform: translateX(10%);
+  }
+
+  .heading_container h1 {
+    font-size: 1.7rem !important;
+  }
+
+  .btn {
+    padding: 0.9rem !important;
+  }
+}
+
+// for above 2560px screen
+@media screen and (min-width: 2560px) {
+  .background_content {
+    width: 20% !important;
+    transform: translateX(60%) !important;
+  }
+
+  .heading_container {
+    height: 5rem;
+    margin-top: -7rem;
+
+    // background: yellow;
+  }
+
+  .heading_container h1 {
+    font-size: 1.9rem !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.9rem !important;
+    color: $secondary-color;
+  }
+
+  .sub p {
+    font-size: 1rem !important;
+  }
+}
+
+// sign up styling
+.signup_container {
+  position: absolute;
+  height: 200vh;
+  width: 100%;
+  top: 0;
+  left: 200rem;
+  z-index: 20;
+  background: $lighter_secondary;
+  display: flex;
+  justify-content: center;
+  transition: left 1s ease-in;
+
+  .close_signup {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+
+    .close_signup_container {
+      padding: 1rem;
+      // background: $primary-color;
+
+      .fa-times {
+        font-size: 1.5rem;
+        color: $lighter_secondary;
+      }
+    }
+  }
+
+  .signup {
+    height: 42rem;
+    width: 90%;
+    max-width: 28rem;
+    margin: 0 auto;
+    background: $secondary_color;
+    box-shadow: 0 0 3px 2px $main_color;
+    margin-top: 1rem;
+
+    %signup_container {
+      height: 3rem;
+    }
+
+    %signup_button {
+      display: inline-block;
+      width: 100%;
+      height: 3rem;
+      border: none;
+    }
+
+    .signup_heading {
+      width: 80%;
+      height: 3rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: capitalize;
+        color: $primary-color;
+      }
+    }
+
+    .signup_form {
+      width: 70%;
+      padding: 2rem;
+      margin: auto;
+
+      .signup_google {
+        @extend %signup_container;
+        box-shadow: 1px 2px 2px $log-in-color;
+
+        .signup_button {
+          @extend %signup_button;
+          margin-bottom: 0.5rem;
+          cursor: pointer;
+          background: $log-in-color;
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .signup_lines {
+      height: 2rem;
+      width: 100%;
+      margin: 0.5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .lines {
+        width: 8rem;
+        height: 0.1rem;
+        background: $primary-color;
+      }
+
+      p {
+        margin: 0 0.4rem;
+        font-size: 1.5rem;
+        color: $primary-color;
+      }
+    }
+
+    .all_mails {
+      @extend %signup_container;
+      height: 14rem;
+
+      small {
+        color: $log-in-color;
+        margin: 0.4rem;
+      }
+
+      #username,
+      #signup_email,
+      #signup_password,
+      #confirm {
+        @extend %signup_button;
+        margin: 0.5rem 0;
+      }
+
+      #username,
+      #signup_email,
+      #signup_password,
+      #confirm::placeholder {
+        // background: $main_color;
+        text-indent: 1rem;
+      }
+
+      #username,
+      #signup_email,
+      #signup_password,
+      #confirm:focus {
+        outline-color: $primary-color;
+      }
+
+      #signup_password {
+        position: relative;
+      }
+    }
+
+    .signup_checkbox {
+      @extend %signup_container;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 6.5rem;
+
+      #signup_checkbox {
+        margin-right: 1rem;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+
+      .checkbox_text {
+        font-size: 1.2rem;
+        color: $sign-up-color;
+      }
+    }
+
+    .signup_submit {
+      @extend %signup_container;
+
+      #signup_login {
+        @extend %signup_button;
+        cursor: pointer;
+        background: $log-in-color;
+        color: $secondary-color;
+        box-shadow: 1px 2px 2px $log-in-color;
+      }
+
+      #signup_login:focus {
+        outline: 2px solid $sign-up-color;
+      }
+    }
+
+    .registered {
+      height: 1rem;
+      width: 100%;
+      display: flex;
+      margin-top: 0.5rem;
+
+      p,
+      #signup_btn {
+        font-size: 1rem;
+        text-transform: lowercase;
+      }
+
+      #signup_btn {
+        display: inline-block;
+        border: none;
+        height: 2rem;
+        background: $sign-up-color;
+        color: $secondary-color;
+        cursor: pointer;
+      }
+
+      #signup_btn:focus {
+        outline: 2px solid $log-in-color;
+      }
+    }
+  }
+}
+
+.sign {
+  left: 0;
+}
+.error {
+  outline-color: $log-in-color;
+}
+.correct {
+  outline-color: $sign-up-color;
+}
+
+@media screen and(min-width: 768px) {
+  .signup {
+    margin-top: 4rem !important;
+  }
+}
+
+// shopping cart styling
+.shopping_cart {
+  height: 100vh;
+  width: 100%;
+  background: #999;
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  overflow-y: scroll;
+  background: $cart_overlay;
+  transform: translateX(-5000px);
+  transition: transform 1s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .shopping_cart {
+    top: 6rem;
+  }
+}
+.cart {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  max-width: 500px;
+  background: $secondary_color;
+  // margin:0 auto ;
+}
+.cart_details {
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  .update {
+    // background: $secondary-color;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-transform: capitalize;
+    border: 1px solid $sign-up-color;
+    color: #12130f;
+  }
+  #cart {
+    padding: 1rem 2.5rem;
+  }
+}
+.container {
+  margin-top: 1rem;
+  height: 100%;
+}
+.products_cart {
+  position: relative;
+  width: 95%;
+  max-width: 27rem;
+  height: 13rem;
+  background: $secondary-color;
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: box-shadow 0.5s ease-out;
+  margin-top: 0.5rem;
+}
+.products_cart:hover {
+  box-shadow: 5px 5px 10px 10px $main_color;
+}
+
+.image_container {
+  width: 15rem;
+  height: 10rem;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.center {
+  // width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.3rem;
+}
+%shared_paragraph {
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-transform: capitalize;
+  word-spacing: 0.1rem;
+  color: $lighter_secondary;
+}
+.product_name {
+  p {
+    @extend %shared_paragraph;
+    font-size: 0.9rem;
+    line-height: 1.1;
+    font-weight: bold;
+  }
+}
+.shipping {
+  padding: 0.5rem 0;
+  width: 100%;
+  p {
+    @extend %shared_paragraph;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    font-weight: lighter;
+    text-align: center;
+  }
+}
+.prices {
+  width: 100%;
+  p {
+    @extend %shared_paragraph;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .cart_details {
+    .update {
+      padding: 1rem 1rem !important;
+    }
+    #cart {
+      padding: 1rem 2rem !important;
+    }
+  }
+  .image_container {
+    height: 10rem;
+    width: 20rem;
+  }
+  .product_name {
+    margin-top: 0.5rem;
+    p {
+      @extend %shared_paragraph;
+      font-size: 0.9rem;
+      line-height: 1;
+      font-weight: bolder !important;
+      text-emphasis: center;
+    }
+  }
+}
+.product_buttons {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  // max-width: 20rem;
+  height: 3rem;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid $primary-color;
+
+  small {
+    width: 0.5rem;
+    height: 1rem;
+    padding: 0 0.5rem;
+    background: $secondary-color;
+    text-align: center;
+  }
+}
+.delete,
+.quantity > span {
+  cursor: pointer;
+  padding: 0.1rem;
+  z-index: 2;
+}
+.cart_bottom_container {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart_subtotal {
+  width: 100%;
+  height: 3rem;
+}
+
+.subtotal_container {
+  width: 20rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  .subtotal,
+  .subtotal_amount {
+    @extend %shared_paragraph;
+    font-weight: bold;
+  }
+}
+
+@media screen and(max-width:300px) {
+  .subtotal_container {
+    width: 15rem;
+  }
+}
+.call,
+.clear_items {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.clear_items_container,
+.call_order {
+  display: inline-block;
+  width: 95%;
+  max-width: 20rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+
+  p {
+    text-align: center;
+    @extend %shared_paragraph;
+    font-weight: bold;
+    color: $secondary-color;
+  }
+}
+.clear_items_container {
+  background: $sign-up-color;
+  margin-bottom: 0.5rem;
+}
+.call_order {
+  background: $log-in-color;
+}
+.call_order:hover {
+  opacity: 0.9;
+  box-shadow: 1px 1px 1px $log-in-color;
+}
+.clear_items_container:hover {
+  opacity: 0.8;
+  box-shadow: 1px 1px 1px $sign-up-color;
+}
+.shop {
+  transform: translateX(-0);
+}

@@ -1,0 +1,18 @@
+{
+  "name": "clepo",
+  "version": "1.0.0",
+  "description": "E-commerce",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss:css/style.css",
+    "build:sass": "sass  sass/main.scss:css/main.css",
+    "concat:css": "concat -o css/concat.css css/main.css css/reset.css "
+  },
+  "author": "Thomas Ejembi",
+  "license": "ISC",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "sass": "^1.26.11"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <script src="all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https:apis.google.com/js/api.js"></script>
+        <!-- contentful cdn -->
+        <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <title>Klepo Collections</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="header_container">
+          <div class="hamburger_menu">
+            <i class="fa fa-bars"></i>
+          </div>
+          <div class="logo">
+            <a href="#">Klepo <sub>collections</sub></a>
+          </div>
+          <div class="icon_container">
+            <span><i class="fa fa-search icon"></i></span>
+           <span class="user">
+             <i class="fa fa-user icon"></i>
+            </span>
+           <span class="shopping-cart"> 
+             <i class="fa fa-shopping-cart icon"></i>
+            <span class="shopping_cart_count">
+            </span>
+            </span> 
+          </div>
+        </div>
+        <nav class="nav">
+          <div class="nav_container">
+            <div class="top__items">
+              <div class="user_button">
+                <span class="log_in">log in</span>
+                <span class="sign_up">sign up</span>
+              </div>    
+              <div class="search__bar">
+                <span class="search_body">
+                  <input type="search"  id="search" placeholder="search product">
+                </span>
+                <span class="search__button">
+                  Search
+                </span>
+              </div>
+            </div>
+          <ul class="links__container">
+            <li>
+              <a href="#"> all products</a>
+          </li>
+            <li class="list  men_list" data-id="men">
+              <a href="#">male</a>
+              <!-------------MEN DROP DOWN------------------->
+              <!-- <div class="drop_down desktop" id="men">
+                <span class="open_left left" id="second">
+                  <p> for men</p>
+                 <span class="left-close">
+                   <i class="fa fa-chevron-left"> </i>
+                  </span>
+                </span>
+                <ul>
+                   <li><a href="#">sneakers</a></li>
+                   <li><a href="#">hoodie</a></li>
+                   <li><a href="#">jeans</a></li>
+                   <li><a href="#">shirts</a></li>
+                   <li><a href="#">shorts</a></li>
+                   <li><a href="#">caps</a></li>
+                   <li><a href="#">joggers</a></li>
+                 </ul>
+               </div> -->
+             <!-------------MEN DROP DOWN ENDS------------------->
+
+              <span class="open_drop_down" id="second">
+                <i class="fa fa-chevron-right"> </i>
+              </span>
+            </li>
+            <!--------MALE SIDE BAR--------------- -->
+            <div class="drop_down first sidebar" id="men">
+              <span class="open_left left" id="second">
+                <p> for men</p>
+               <span class="left-close">
+                 <i class="fa fa-chevron-left"> </i>
+                </span>
+              </span>
+              <ul>
+                 <li><a href="#">sneakers</a></li>
+                 <li><a href="#">hoodie</a></li>
+                 <li><a href="#">jeans</a></li>
+                 <li><a href="#">shirts</a></li>
+                 <li><a href="#">shorts</a></li>
+                 <li><a href="#">caps</a></li>
+                 <li><a href="#">joggers</a></li>
+               </ul>
+             </div>
+                <!--------MALE SIDE BAR ENDS--------------->
+            <li class="list " data-id="ladies">
+              <a href="#">ladies</a>
+              <span  class="open_drop_down" id="third">
+                <i class="fa fa-chevron-right"></i>
+              </span>
+                <!-------------LADIES DROP DOWN---------->
+              <!-- <div class="drop_down desktop second" id="ladies">
+                <span class="open_left " id="second">
+                  <p> for ladies</p>
+                  <span class="left-close"> 
+                  <i class="fa fa-chevron-left"> </i>
+                  </span>
+                </span>
+                <ul>
+                   <li><a href="#">bags</a></li>
+                   <li><a href="#">sneakers</a></li>
+                   <li><a href="#">easy wears</a></li>
+                   <li><a href="#">jeans</a></li>
+                   <li><a href="#">shirts</a></li>
+                   <li><a href="#">joggers</a></li>
+                 </ul>
+               </div> -->
+             <!-------------LADIES DROP DOWN END---------->
+              </li>
+
+              <!-------LADIES PRODUCT SIDEBAR------------------->
+              <div class=" drop_down second sidebar" id="ladies">
+                <span class="open_left " id="second">
+                  <p> for ladies</p>
+                  <span class="left-close"> 
+                  <i class="fa fa-chevron-left"> </i>
+                  </span>
+                </span>
+                <ul>
+                   <li><a href="#">bags</a></li>
+                   <li><a href="#">sneakers</a></li>
+                   <li><a href="#">easy wears</a></li>
+                   <li><a href="#">jeans</a></li>
+                   <li><a href="#">shirts</a></li>
+                   <li><a href="#">joggers</a></li>
+                 </ul>
+               </div>
+               <!-------LADIES PRODUCT SIDEBAR ENDS------------------>
+
+            <li class="list" data-id="collections">
+              <a href="#">Collections</a>
+              <span  class="open_drop_down " id="fourth">
+              <i class="fa fa-chevron-right"></i>
+              </span>
+             <!-- end of drop down for collections -->
+             <!-----------COLLECTIONS DROP DOWN------------->
+             <!-- <div class="drop_down desktop"  id="collections"> -->
+              <!-- <span class="open_left " id="third">
+                <p>our collections</p>
+                <span class="left-close">
+                <i class="fa fa-chevron-left"></i>
+                </span>
+              </span>
+              <ul>
+                 <li><a href="#" >bags</a></li>
+                 <li><a href="#">sneakers</a></li>
+                 <li><a href="#">hoodie</a></li>
+                 <li><a href="#">easy wears</a></li>
+                 <li><a href="#">jeans</a></li>
+                 <li><a href="#">shirts</a></li>
+                 <li><a href="#">shorts</a></li>
+                 <li><a href="#">caps</a></li>
+                 <li><a href="#">joggers</a></li>
+               </ul>
+             </div> -->
+            <!-----------COLLECTIONS DROP DOWN ENDS------------->
+
+            </li>            
+               <!-------COLLECTIONS SIDEBAR------------------>
+               <div class="drop_down third sidebar"  id="collections">
+                <span class="open_left " id="third">
+                  <p>our collections</p>
+                  <span class="left-close">
+                  <i class="fa fa-chevron-left"></i>
+                  </span>
+                </span>
+                <ul>
+                   <li><a href="#" >bags</a></li>
+                   <li><a href="#">sneakers</a></li>
+                   <li><a href="#">hoodie</a></li>
+                   <li><a href="#">easy wears</a></li>
+                   <li><a href="#">jeans</a></li>
+                   <li><a href="#">shirts</a></li>
+                   <li><a href="#">shorts</a></li>
+                   <li><a href="#">caps</a></li>
+                   <li><a href="#">joggers</a></li>
+                 </ul>
+               </div>
+             <!-------COLLECTIONS SIDEBAR ENDS------------------>
+
+
+            <li>
+              <a href="#contact">contact</a></li>
+          </ul>
+          <div class="social_media_container">
+            <span class="social__icons" >
+              <i class="fab fa-facebook-f" id="facebook"></i>
+            </span>
+            <span class="social__icons" >
+              <i class="fab fa-instagram" id="instagram"></i>
+            </span>
+            <span class="social__icons" >
+              <i class="fab fa-twitter" id="twitter"></i>
+            </span>
+            <span class="social__icons" >
+              <i class="fab fa-whatsapp" id="whatsapp"></i>
+            </span>
+          </div>
+        </div>
+        </nav>
+                         <!--   log in form     -->
+                          <div class="log_in_container">
+                          <div class="log_in_sign_out">
+                            <div class="close_login">
+                              <span class=" close_login_container">
+                                <i class="fa fa-times"></i>
+                              </span>
+                            </div>
+                             <div class="label_heading">
+                                 <h1>login here</h1>
+                             </div>
+                              <form class="form">
+                              <div class="google">
+                            <button class="button" type="button">LOG IN WITH GOOGLE
+                             <i class="fab fa-google"></i>
+                            </button>
+                              </div>
+                              <div class="lines_container">
+                                <div class="lines" id="one"></div>
+                                <p>OR</p>
+                                <div class="lines" id="two"></div>
+                              </div>
+                              <div class="mail">
+                                <span class="email_container message">
+                                  <input type="email" id="email" placeholder="Your Email Address">
+                                  <small></small>
+                                </span>
+                            <span class="password_container message">
+                              <input  type="password" id="password" placeholder="Enter Your Password" >
+                              <small></small>
+                            </span>
+                            </div>
+
+                              <div class="check_box">
+                                <input type="checkbox"  id="checkbox">
+                                <p class="checkbox_text"> Remember Me</p><small></small>
+                              </div>
+                              <div class="submit_container">
+                                <button type="submit" id="login">LOG IN</button>
+                              </div>
+                              <div class="member">
+                                <p>not yet registered?</p>
+                                <button type="button" id="signup">sign up</button>
+                              </div>
+                              </form>
+                          </div>
+                      </div>
+                      <!-- sign up form -->
+                      
+        <aside class="shopping_cart">
+            <div class="cart">
+              <!-- update Details -->
+              <div class="cart_details">
+                <span class="update" id="item"></span>
+                <span class="update" id="cart"></span>
+              </div>
+              <!-- product cart -->
+              <div class="container">
+                
+              </div>
+                       <!-- total amount -->
+                       <div class="cart_bottom_container">
+                         <div class="cart_subtotal">
+                         <div class="subtotal_container">
+                           <div class="subtotal">total amount</div>
+                           <div 
+                           class="subtotal_amount"></div>
+                         </div>
+                         <div class="call">
+                           <div class="clear_items_container">
+                             <p>check out</p>
+                           </div>
+                           <div class="call_order">
+                            <a href="tel:" >
+                              <p>call to order</p>
+                            </a>
+                          </div>
+                         </div>
+                        </div>
+                       </div>
+
+        </div>
+      </div> 
+      </aside>
+       </header>
+      <article class="background_container">
+        <div class="container">
+          <div class="container_image">
+            <div class="background_content">
+              <div class="heading_container">
+                <h1>cloth that will talk in your behalf.</h1>
+                <div id="empty"></div>
+
+                <div class="sub">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, maxime!</p>
+                </div>
+                <div id="container"></div>
+                <div class="btn_container">
+                  <a href="#" class="btn">shop now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <section class="signup_container">
+        
+          <div class="signup">
+            <div class="close_signup">
+              <span class=" close_signup_container">
+                <i class="fa fa-times"></i>
+              </span>
+            </div>
+             <div class="signup_heading">
+                 <h1>register with us</h1>
+             </div>
+              <form class="signup_form">
+              <div class="signup_google">
+            <button class="signup_button" type="button">SIGN UP WITH GOOGLE
+             <i class="fab fa-google"></i>
+            </button>
+              </div>
+              <div class="signup_lines">
+                <div class="lines" id="one"></div>
+                <p>OR</p>
+                <div class="lines" id="two"></div>
+              </div>
+              <div class="all_mails">
+                <!-- user name -->
+                <span class="signup_email">
+                  <input type="text" class="username"  id="username" placeholder="Your Username">
+                <small></small>
+              </span>
+           
+                <!-- email -->
+                <span class="username_container">
+                  <input type="email" id="signup_email" placeholder="Enter Your Email">
+                  <small></small>
+                </span>
+
+                <!-- password -->
+            <span class="signup_password">
+              <input type="password" id="signup_password" placeholder="Create Password"  />
+             <small></small>
+
+                  </span>
+              <!-- confirm password -->
+            <span class="confirm_container">
+              <input  type="password" id="confirm" placeholder="Confirm Password">
+            <small></small>
+
+            </span>
+              </div>
+              <!-- sign up check box -->
+              <div class="signup_checkbox">
+                <input type="checkbox"  id="signup_checkbox">
+                <p class="checkbox_text"> Accept Terms and Conditions.</p>
+              </div>
+              <div class="signup_submit">
+                <button type="button" class="submit" id="signup_login">SIGN UP</button>
+              </div>
+              <div class="registered">
+                <p>already a member?</p>
+                <button type="button" id="signup_btn">log in</button>
+              </div>
+              </form>
+          </div>
+        </section>
+        <div class="overview_container">
+          <div class="overview">
+            <div>
+              <i class="fa fa-phone i"></i>
+              <span class="text">
+                <h6>help and support</h6>
+                <p>feedback 24/7</p>
+              </span>
+            </div>
+            <div>
+              <i class="fa fa-shipping-fast i"></i>
+              <span class="text">
+                <h6>fast delivery</h6>
+                <p>free on order over N100,000</p>
+              </span>
+            </div>
+            <div>
+              <i class="fas fa-circle-notch i"></i>
+              <span class="text">
+                <h6>return exchange</h6>
+                <p>100% gurantee</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section class="layout_container">
+          <div class="best_selling center ">
+            <!-- card container for products -->
+            <div class="bestselling_header">
+              <h1>best selling</h1>
+              <div class="lines"></div>
+            </div>
+              <!-- product card -->
+              <div class="product_card_layout">
+           
+          </div>
+    <!-- end of best selling product card -->
+        </div>
+      </section>
+      <!-- end of bestselling sections -->
+
+      <!-- collections container sections -->
+      <section class="collections_container">
+        <div class="collections">
+            <!--  container for collections -->
+            <div class="collections_header">
+              <h1>collections</h1>
+              <div class="lines"></div>
+            </div>
+              <!-- products card collections -->
+            <div class="collections_layout">
+                          </div>
+                        </div>
+        <!-- LADIES COLLECTION SECTIONS -->
+      </section>
+      <!-- separator sections -->
+      <div class="seperator_container">
+        <div class="seperator image">
+          <div class="text_content">
+            <div class="text_container">
+              <h1>latest collections</h1>
+              <p>save up to <span>20%!</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The review section -->
+      <article class="container_review">
+        <div class="review_container">
+          <!-- the review container  -->
+          <!-- the review container close -->
+        </div>
+      </article>
+      <!-- The end review sections -->
+      <!-- footer sections -->
+      <footer>
+        <div class="footer_container">
+          <div class="newsletter">
+            <!-- email container in the footer -->
+            <div class="email_container">
+              <h4>get klepo market update</h4>
+              <h6>up to date clothing fashion</h6>
+                <div class="email">
+                  <input type="email" class="email_input" placeholder="Email Address">
+                  <span class="arrow">
+                    <i class="fa fa-chevron-right"></i>
+                  </span>
+                </div>
+            </div>
+            <!-- email container in the footer end -->
+
+                     <!--social media footer -->
+            <div class="socialmedia_container" id="contact">
+                <a  href="#"class="footer__icon" target="blank">
+                  <i class="fab fa-facebook-f " id="facebook"></i>
+                </a>
+                <a href="#" class="footer__icon"  target="blank">
+                  <i class="fab fa-instagram " id="instagram"></i>
+                </a>
+                <a href="" class="footer__icon" target="blank" >
+                  <i class="fab fa-whatsapp " id="whatsapp"></i>
+                </span>
+                <a href="#"  target="blank" class="footer__icon" >
+                  <i class="fab fa-twitter " id="twitter"></i>
+                </a>
+              </div>    
+                     <!--social media footer end-->
+                     <!-- about klepo collections footer-->
+                     <div class="about_footer">
+                       <h1>about klepo collections</h1>
+                       <h6>klepo address</h6>
+                       <a href="tel:09065682688">customer care center</a>
+                     </div> 
+                     <!-- about klepo collections footer end-->
+          </div>
+          <!-- newsletter footer ends -->
+          <div class="line"></div>
+          <div class="developer_brand">
+            <span class="copyright">Klepo Collections 
+          </span>
+          <span class="date">&copy <span></span></span>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

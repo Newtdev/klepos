@@ -1,0 +1,117 @@
+$primary-color: #2a0845;
+// $primary-color: #1e73be;
+$secondary-color: #f1f1f1;
+$sign-up-color: #4caf50;
+$log-in-color: #ff0000;
+$main_color: #ccc;
+
+.overview_container {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    bottom: -1.5rem;
+    // margin: 0 auto;
+}
+
+.overview {
+    width: 90%;
+    max-width: 50rem;
+    height: 100%;
+    background: $secondary-color;
+    opacity: 0.85;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem;
+    border: 6px $primary-color solid;
+    border-radius: 12px;
+}
+
+.overview div {
+    height: 5.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.overview div .i {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: $primary-color;
+    padding-right: 0.4rem;
+    // transform: translateX(70%);
+}
+
+.text {
+    display: inline-block;
+    margin: 0.6rem 0;
+    padding: 0.3rem;
+}
+
+.text h6 {
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.text p {
+    font-size: 0.6rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: $primary-color;
+}
+
+//  for small screen
+@media screen and (min-width:320px) {
+    .overview_container {
+        height: 4rem;
+    }
+
+    .overview div .i {
+        font-size: 1.3rem;
+    }
+
+    .text h6 {
+        font-size: 0.55rem;
+        line-height: 0.8rem;
+    }
+
+    .text p {
+        font-size: 0.35rem;
+    }
+
+    .overview div {
+        height: 5.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.1rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .overview {
+        justify-content: space-evenly;
+    }
+
+    .overview div {
+        height: 4rem !important;
+
+    }
+
+    .overview div .i {
+        font-size: 1.5rem;
+    }
+
+    .text h6 {
+        font-size: 0.9rem;
+    }
+
+    .text p {
+        font-size: 0.8rem;
+    }
+}

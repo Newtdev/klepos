@@ -1,0 +1,52 @@
+@media screen and (min-width: 720px) {
+  .drop_down {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    width: 10rem;
+    height: 24rem;
+    padding: 0.5rem;
+    display: none !important;
+
+    .open_left {
+      display: none !important;
+    }
+
+    .first,
+    .second,
+    .third {
+      display: none !important;
+    }
+
+    ul {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    ul li {
+      height: 100%;
+      width: 100%;
+      margin-bottom: 0.9rem;
+      border-bottom: 1px solid;
+    }
+
+    li:nth-child(9) {
+      border-bottom: none;
+    }
+
+    ul > li > a {
+      display: inline-block;
+      font-size: 1.8rem;
+      margin-left: 0;
+      margin: 0 auto;
+    }
+  }
+
+  .active {
+    display: block;
+  }
+}

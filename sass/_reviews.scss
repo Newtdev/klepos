@@ -1,0 +1,120 @@
+$primary-color: #2a0845;
+$secondary-color: #f1f1f1;
+$lighter-color: #999;
+$darker_color: #333;
+$sign-up-color: #4caf50;
+$log-in-color: #ff0000;
+$main_color: #ccc;
+
+// The review section
+.container_review {
+  height: 16rem;
+  width: 100%;
+  background: $primary-color;
+}
+
+.review_container {
+  height: 100%;
+  width: 100%;
+  max-width: 64rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.review_container::-webkit-scrollbar {
+  display: none;
+}
+
+.individual_review {
+  position: relative;
+  height: 11rem;
+  width: 15.5rem;
+  background: $primary-color;
+  box-shadow: 1px 1px 5px 3px #0e0218;
+  border-radius: 0.5rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  // margin-top: 6rem;
+
+  .reviewer_image {
+    width: 4.5rem;
+    height: 4.5rem;
+    position: absolute;
+    top: -1.9rem;
+    left: -1rem;
+  }
+
+  img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 2px solid $primary-color;
+    border-radius: 0.5rem;
+  }
+
+  .text_container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .reviewer_heading {
+    display: inline-block;
+    width: 9rem;
+    height: 1rem;
+    margin-left: 3.5rem;
+    margin-top: 0.8rem;
+
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-align: center;
+      text-transform: capitalize;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      color: $sign-up-color;
+    }
+  }
+
+  %paragraph_styling {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  .reviewer_location {
+    display: inline-block;
+    width: 7rem;
+    height: 1rem;
+    margin-left: 3.4rem;
+    margin-top: 0.1rem;
+
+    p {
+      @extend %paragraph_styling;
+      color: $lighter-color;
+    }
+  }
+
+  .comments {
+    display: inline-block;
+    height: 6rem;
+    margin-top: 1.5rem;
+    overflow: hidden;
+  }
+
+  P {
+    @extend %paragraph_styling;
+    text-align: left;
+    margin-left: 0.6rem;
+    line-height: 1.1rem;
+    color: $secondary-color !important;
+  }
+}
+
+.down {
+  margin-top: -0.5rem;
+}

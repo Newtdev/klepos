@@ -1,0 +1,116 @@
+$primary-color: #2a0845;
+$secondary-color: #f1f1f1;
+$lighter-color: #999;
+$darker_color: #333;
+$sign-up-color: #4caf50;
+$log-in-color: rgb(221, 27, 27);
+$main_color: #ccc;
+$button: #111;
+
+section {
+  width: 100vw;
+
+  .best_selling {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    background: $main_color;
+    margin-bottom: 1rem;
+  }
+
+  .bestselling_header {
+    width: 100%;
+    height: 3rem;
+    padding-top: 1rem;
+  }
+
+  .bestselling_header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  .bestselling_header .lines {
+    height: 0.3rem;
+    background: $log-in-color;
+    border-radius: 15px;
+    width: 6rem;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+
+  .product_card_layout {
+    width: 100%;
+    height: 17rem;
+    max-width: 70rem;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .product_card_layout::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product_card {
+    width: 14rem;
+    height: 100%;
+    background: $secondary-color;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 1px $secondary-color;
+  }
+
+  .image_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.1rem;
+    width: 100%;
+    border-radius: 0.3rem;
+  }
+
+  .image_container img {
+    display: inline-block;
+    object-fit: cover;
+  }
+
+  .price_details_container {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  %product_details {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    color: $button;
+  }
+
+  .name,
+  .price {
+    @extend %product_details;
+  }
+
+  .store {
+    @extend %product_details;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: $lighter-color;
+  }
+}

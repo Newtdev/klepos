@@ -1,0 +1,398 @@
+/* heading styling */
+$primary-color: #2a0845;
+$secondary-color: #f1f1f1;
+$lighter_secondary: rgba(1, 1, 1, 0.679);
+$main_color: #ccc;
+$sign-up-color: #4caf50;
+$log-in-color: #ff0000;
+$font-family: "Dancing script", cursive;
+$font-fam: "Source San Pro", sans-serif;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $secondary-color;
+  // height: 100vh;
+}
+
+main {
+  background: $main_color;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 0 auto;
+  max-width: 150rem;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  width: 100%;
+  height: 3rem;
+  max-width: 150rem;
+  background: $primary-color;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  margin: 0 auto;
+}
+
+.header_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* hamburger menu styling */
+.hamburger_menu {
+  width: 2.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+
+.hamburger_menu .fa-times,
+.fa-bars {
+  font-size: 1.5rem;
+  color: $secondary-color;
+  transition: all 0.6 ease-in;
+}
+
+.fa-times,
+.fa-bars:hover {
+  color: $main_color;
+  font-size: 1.7rem;
+}
+
+.logo {
+  height: 3rem;
+  margin-left: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo > a {
+  font-size: 2rem !important;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: $secondary-color;
+  sub {
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: lighter;
+  }
+}
+
+/* icon styling*/
+.icon_container {
+  margin-right: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fa-search {
+  display: none;
+}
+
+.icon_container > span {
+  display: inline-block;
+  margin: 0 0.8rem;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: $secondary-color;
+  transition: all 0.6;
+}
+
+.icon:hover {
+  color: $main_color;
+}
+
+.shopping-cart {
+  position: relative;
+}
+
+.shopping_cart_count {
+  position: absolute;
+  top: -0.7rem;
+  right: -0.5rem;
+  padding: 0.2rem;
+  color: $secondary-color;
+  border-radius: 3rem;
+  font-weight: bolder;
+}
+
+// views for mobile less than 320 && for smaller mobile screen
+@media screen and (max-width: 320px) {
+  .hamburger_menu .fa-times,
+  .fa-bars {
+    font-size: 1.2rem;
+    color: $secondary-color;
+  }
+
+  .logo {
+    height: 2rem;
+    margin-left: 0;
+  }
+
+  .logo > a {
+    font-size: 2rem;
+  }
+
+  /* icon styling*/
+  .icon_container {
+    margin-right: 2rem;
+  }
+
+  .icon_container > span {
+    margin: 0;
+  }
+
+  .fa-user,
+  .fa-search {
+    display: none;
+  }
+}
+
+// login and sign up styling
+.log_in_container {
+  height: 100vh;
+  background: $lighter_secondary;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  // display: flex;
+  align-items: center;
+  transform: translateX(500rem);
+  transition: transform 1s ease-in-out;
+
+  .log_in_sign_out {
+    height: 33.5rem;
+    width: 90%;
+    max-width: 30rem;
+    margin: auto;
+    background: $secondary-color;
+    box-shadow: 1px 1px 2px 2px $main_color;
+    transition-delay: 1s;
+    margin-top: 2rem;
+    // position: relative;
+
+    .close_login {
+      cursor: pointer;
+
+      .close_login_container {
+        padding: 1rem;
+        // background: $primary-color;
+
+        .fa-times {
+          font-size: 1.5rem;
+          color: $log-in-color;
+        }
+      }
+    }
+
+    .label_heading {
+      width: 80%;
+      height: 3rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+
+      h1 {
+        font-size: 1.7rem;
+        text-align: center;
+        text-transform: capitalize;
+        color: $primary-color;
+      }
+    }
+
+    form {
+      width: 70%;
+      padding: 2rem;
+      margin: auto;
+      margin-top: 1rem;
+
+      %container {
+        height: 3rem;
+      }
+
+      %button {
+        display: inline-block;
+        width: 100%;
+        height: 3rem;
+        border: none;
+      }
+
+      .google {
+        @extend %container;
+
+        .button {
+          @extend %button;
+          margin-bottom: 0.5rem;
+          cursor: pointer;
+          background: $log-in-color;
+          color: $secondary-color;
+          box-shadow: 1px 2px 2px $log-in-color;
+
+          .fa-google {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .lines_container {
+        // background: $sign-up-color;
+        height: 2rem;
+        width: 100%;
+        margin: 0.5rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .lines {
+          width: 8rem;
+          height: 0.1rem;
+          background: $primary-color;
+        }
+
+        p {
+          margin: 0 0.4rem;
+          font-size: 1.5rem;
+          color: $primary-color;
+        }
+      }
+
+      .mail {
+        // background: greenyellow;
+        @extend %container;
+        height: 9.5rem;
+
+        %outline:focus {
+          outline: 2px solid $primary-color;
+        }
+
+        #email,
+        #password {
+          @extend %button;
+          margin: 0.5rem 0;
+          @extend %outline;
+        }
+        #email {
+          padding: 0.09rem;
+        }
+
+        #email,
+        #password::placeholder {
+          text-indent: 1rem;
+        }
+        .error {
+          outline: 2px solid $log-in-color;
+        }
+        .correct {
+          outline: 2px solid $sign-up-color;
+        }
+      }
+      small {
+        display: block;
+        color: $log-in-color;
+        margin-top: -0.2rem;
+      }
+    }
+  }
+
+  .check_box {
+    @extend %container;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    #checkbox {
+      // margin-left: 1.5rem;
+      margin-right: 1rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    .checkbox_text {
+      font-size: 1.2rem;
+      color: $sign-up-color;
+    }
+  }
+
+  .submit_container {
+    @extend %container;
+    margin-top: 1rem;
+    background: indigo;
+
+    #login {
+      @extend %button;
+      cursor: pointer;
+      background: $sign-up-color;
+      color: $secondary-color;
+      box-shadow: 1px 2px 2px $sign-up-color;
+    }
+
+    #login:focus {
+      outline: 2px solid $sign-up-color;
+    }
+  }
+
+  .member {
+    // background: blue;
+    height: 1rem;
+    width: 100%;
+    display: flex;
+    margin-top: 0.5rem;
+
+    p,
+    #signup {
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      text-transform: lowercase;
+    }
+
+    #signup {
+      display: inline-block;
+      border: none;
+      height: 2rem;
+      background: $log-in-color;
+      color: $secondary-color;
+      border-radius: 0.2rem;
+      cursor: pointer;
+    }
+
+    #signup:focus {
+      outline: 2px solid $log-in-color;
+    }
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+@media screen and (min-width: 768px) {
+  .log_in_container {
+    height: 100vh;
+    background: $lighter_secondary;
+    position: absolute;
+    top: 6rem;
+  }
+}

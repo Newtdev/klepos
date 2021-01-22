@@ -1,0 +1,123 @@
+$primary-color: #2a0845;
+$secondary-color: #f1f1f1;
+$sign-up-color: #4caf50;
+$log-in-color: #ff0000;
+$main_color: #ccc;
+
+.background_container {
+  height: 25rem;
+  width: 100vw;
+  margin-top: 3rem;
+  position: relative;
+
+}
+
+.container {
+  height: 100% !important;
+  width: 100%;
+}
+
+.container_image {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(1, 1, 1, 0.679), rgba(0, 0, 0, 0.3)),
+    url("../images/background.jpg");
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background_content {
+  height: 11rem;
+  width: 15rem;
+  // background: red;
+  transform: translateY(50%);
+  margin-left: 2rem;
+}
+
+.heading_container {
+  height: 5rem;
+  // background: yellow;
+}
+
+.heading_container h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.6rem;
+  color: $secondary-color;
+}
+
+.btn_container {
+  background: $primary-color;
+  margin-top: 1rem;
+  width: 7rem;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.btn_container:hover {
+  opacity: 0.75;
+}
+
+.btn {
+  display: block;
+  padding: 0.7rem;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  text-align: center;
+  color: $secondary-color;
+}
+
+%empty {
+  height: 0.2rem;
+  width: 5.8rem;
+  border-radius: 6rem;
+  background: $log-in-color;
+  margin: 0.7rem 0;
+}
+
+#empty {
+  @extend %empty;
+}
+
+.sub {
+  width: 100%;
+}
+
+.sub p {
+  font-size: 0.85rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+  line-height: 1rem;
+  color: $secondary-color;
+}
+
+#container {
+  @extend %empty;
+  width: 7rem;
+}
+
+// for small screen
+@media screen and (max-width: 320px) {
+  .container_image {
+    background-position: center;
+  }
+
+  .background_content {
+    margin-left: 0.8rem;
+  }
+
+  .heading_container h1 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+}
+
+// for  375px screen
+@media screen and (max-width: 375px) {
+  .container_image {
+    background-position: center;
+  }
+}

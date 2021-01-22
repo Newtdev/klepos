@@ -1,0 +1,222 @@
+$primary-color: #2a0845;
+$secondary-color: #fff;
+$sign-up-color: #4caf50;
+$log-in-color: rgb(221, 27, 27);
+$main_color: #ccc;
+
+.collections_container {
+  background: $secondary-color;
+  width: 100%;
+}
+
+.collections {
+  height: 100%;
+  overflow-y: none !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.collections::-webkit-scrollbar {
+  display: none;
+}
+
+.collections_header {
+  width: 100%;
+  height: 3rem;
+  padding-top: 1rem;
+}
+
+.collections_header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  color: $primary-color;
+}
+
+.collections_header .lines {
+  height: 0.3rem;
+  border-radius: 15px;
+  width: 6rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.collections_layout {
+  width: 100%;
+  height: 100%;
+  max-width: 70rem;
+  //   background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  //   flex: 0 0 1;
+}
+
+.collections_product_card {
+  position: relative;
+  width: 14rem;
+  height: 20rem;
+  //   background: $secondary-color;
+  //   background-color: green;
+  border-radius: 0.3rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin: 0 auto;
+  transition: all 0.2s ease;
+  img {
+    object-fit: cover !important;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .collections_product_card {
+    width: 9.5rem;
+  }
+}
+.collections_product_card:hover {
+  box-shadow: 2px 2px 10px 10px #ccc;
+}
+
+.discount_container {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  height: 1.5rem;
+  width: 6rem;
+  background: $log-in-color;
+  border-top-right-radius: 0.2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount {
+  font-size: 1rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+  text-align: center;
+  color: $secondary-color;
+}
+
+%collections_details {
+  display: inline-block;
+  width: 100%;
+  text-transform: capitalize;
+  margin-bottom: 0.1rem;
+  margin-top: 0.2rem;
+  // margin-left: 35%;
+  text-align: center;
+  color: $primary-color;
+}
+
+.collections_details_container {
+  // background-color: $primary-color;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+
+.product_name,
+.product_price {
+  @extend %collections_details;
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.store {
+  @extend %collections_details;
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+.collection_call {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+%product_button {
+  display: inline-block;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.add_cart {
+  @extend %product_button;
+  background: $log-in-color;
+  color: $secondary-color;
+  border: none;
+  transition: transform 0.5 ease;
+}
+.add_cart:active {
+  transform: translateY(3px);
+}
+
+// separator stylings
+.seperator_container {
+  width: 100%;
+  height: 17rem;
+}
+
+.seperator {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(1, 1, 1, 0.679), rgba(0, 0, 0, 0.3)),
+    url("/images/seperator.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text_content {
+  height: 6rem;
+  width: 20rem;
+  background-color: rgba(255, 255, 255, 0.57);
+  box-shadow: 0px 0px 5px 1px$main_color;
+  margin: 0 0.3rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+    color: $secondary-color;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+    color: $log-in-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text_content {
+    width: 50%;
+  }
+
+  .seperator_container {
+    margin-top: 1rem;
+  }
+}
