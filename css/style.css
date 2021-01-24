@@ -993,14 +993,13 @@ a {
   }
 }
 .shopping_cart {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  background: #999;
   position: fixed;
   top: 3rem;
   left: 0;
   overflow-y: scroll;
-  background: #f1f1f1b3;
+  background: rgba(17, 17, 17, 0.486);
   transform: translateX(-5000px);
   transition: transform 1s ease-in-out;
 }
@@ -1013,6 +1012,7 @@ a {
 .cart {
   position: fixed;
   left: 0;
+  min-height: 100vh;
   width: 100%;
   max-width: 500px;
   background: #f1f1f1;
@@ -1308,7 +1308,7 @@ a {
 .container_image {
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(rgba(1, 1, 1, 0.679), rgba(0, 0, 0, 0.3)), url("../images/background.jpg");
+  background-image: linear-gradient(rgba(1, 1, 1, 0.679), rgba(0, 0, 0, 0.3)), url("../images/background-min.jpg");
   background-position: cover;
   background-size: cover;
   background-repeat: no-repeat;

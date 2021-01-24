@@ -9,7 +9,6 @@ $main_color: #ccc;
   width: 100vw;
   margin-top: 3rem;
   position: relative;
-
 }
 
 .container {
@@ -21,7 +20,7 @@ $main_color: #ccc;
   height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(1, 1, 1, 0.679), rgba(0, 0, 0, 0.3)),
-    url("../images/background.jpg");
+    url("../images/background-min.jpg");
   background-position: cover;
   background-size: cover;
   background-repeat: no-repeat;
