@@ -9,6 +9,7 @@ $main_color: #ccc;
 // The review section
 .container_review {
   height: 16rem;
+  max-height: 25rem;
   width: 100%;
   background: $primary-color;
 }
@@ -58,7 +59,8 @@ $main_color: #ccc;
 
   .text_container {
     height: 100%;
-    width: 100%;
+    max-height: fit-content;
+    max-width: fit-content;
   }
 
   .reviewer_heading {
@@ -79,11 +81,11 @@ $main_color: #ccc;
   }
 
   %paragraph_styling {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.7rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
     text-align: center;
     text-transform: capitalize;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
 
   .reviewer_location {
@@ -101,7 +103,7 @@ $main_color: #ccc;
 
   .comments {
     display: inline-block;
-    height: 6rem;
+    max-height: 20rem;
     margin-top: 1.5rem;
     overflow: hidden;
   }

@@ -37,7 +37,6 @@ const productCardContainer = document.querySelector(".cart");
 const container = document.querySelector(".container");
 const reviewcontainer = document.querySelector(".review_container");
 const button = document.querySelector("button");
-
 /******************GOOGLE API ********************
 function googleAPI() {
   window.gapi.load("client:auth2", () => {
@@ -78,6 +77,7 @@ async function fetchData() {
     });
 
     // let data = await datas.json();
+    /**fetch data from contentful */
     let getData = data.items;
     getData = getData.map((item) => {
       const { id } = item.sys;
@@ -951,6 +951,7 @@ closedLogin.addEventListener("click", () => {
 // shopping cart toggling
 shoppingCart.addEventListener("click", () => {
   shoppingContainer.classList.toggle("shop");
+  productCardContainer.classList.toggle("slide_cart");
 });
 
 /*******************USER ICON TOGGLE LOGIN BAR*******************/

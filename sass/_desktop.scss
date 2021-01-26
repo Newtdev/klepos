@@ -1,6 +1,6 @@
 $all_text_weight: lighter;
 $primary-color: #2a0845;
-$secondary-color: #f1f1f1;
+$secondary-color: #fff;
 $sign-up-color: #4caf50;
 $log-in-color: #ff0000;
 $lighter_secondary: #12130f;
@@ -161,7 +161,6 @@ $cart_overlay: rgba(17, 17, 17, 0.486);
   .background_container {
     height: 30rem;
     width: 100vw;
-    background: green;
     margin-top: 6rem !important;
   }
 
@@ -529,15 +528,16 @@ $cart_overlay: rgba(17, 17, 17, 0.486);
 
 // shopping cart styling
 .shopping_cart {
-  min-height: 100vh;
-  width: 100%;
-  position: fixed;
+  position: absolute;
   top: 3rem;
   left: 0;
+  width: 100%;
+  height: 100vh;
   overflow-y: scroll;
   background: $cart_overlay;
   transform: translateX(-5000px);
   transition: transform 1s ease-in-out;
+  transition-delay: 0.5s;
 }
 @media screen and (min-width: 768px) {
   .shopping_cart {
@@ -545,13 +545,12 @@ $cart_overlay: rgba(17, 17, 17, 0.486);
   }
 }
 .cart {
-  position: fixed;
-  left: 0;
-  min-height: 100vh;
   width: 100%;
+  min-height: 50rem;
   max-width: 500px;
   background: $secondary_color;
-  // margin:0 auto ;
+  transform: translateX(-5000px);
+  transition: transform 1s ease-in-out;
 }
 .cart_details {
   height: 10rem;
@@ -576,8 +575,9 @@ $cart_overlay: rgba(17, 17, 17, 0.486);
   }
 }
 .container {
-  margin-top: 1rem;
   height: 100%;
+  width: 100%;
+  margin-top: 1rem;
 }
 .products_cart {
   position: relative;
@@ -623,9 +623,10 @@ $cart_overlay: rgba(17, 17, 17, 0.486);
 .product_name {
   p {
     @extend %shared_paragraph;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     line-height: 1.1;
     font-weight: bold;
+    text-align: left;
   }
 }
 .shipping {
@@ -636,15 +637,16 @@ $cart_overlay: rgba(17, 17, 17, 0.486);
     font-size: 0.8rem;
     line-height: 1.2;
     font-weight: lighter;
-    text-align: center;
+    // text-align: center;
   }
 }
 .prices {
   width: 100%;
   p {
+    font-size: 1.2rem;
     @extend %shared_paragraph;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
   }
 }
 @media screen and (max-width: 320px) {
@@ -769,6 +771,9 @@ $cart_overlay: rgba(17, 17, 17, 0.486);
 .clear_items_container:hover {
   opacity: 0.8;
   box-shadow: 1px 1px 1px $sign-up-color;
+}
+.slide_cart {
+  transform: translateX(-0);
 }
 .shop {
   transform: translateX(-0);
